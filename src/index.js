@@ -31,10 +31,10 @@ for (const button of buttons) {
 }
 
 /*    Introduce JSON data cocktails in carrousel */
-const putCoctailksSwiper = async() => {
-  const cocktails = await getAllCocktails();
+const putCoctailksSwiper = () => {
+  const cocktails = getAllCocktails();
 
-  for (const cocktail of cocktails.drinks) {
+  for (const cocktail of cocktails) {
     const swiperWrapper = document.querySelector(".swiper-wrapper");
 
     //  Slider

@@ -5,6 +5,7 @@ import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 const quotesArray = [
   "\"Después de tragos y fiesta, mira bien con quien te acuestas.\" <br>Anónimo",
   "\"Bebo para olvidar que soy un borracho.” <br>Antonine de Saint-Exupery",
@@ -49,6 +50,7 @@ const putCoctailksSwiper = () => {
     const imageCocktail = document.createElement("img");
     imageCocktail.classList.add("cocktail-img");
     imageCocktail.src = cocktail.strDrinkThumb;
+    imageCocktail.alt = cocktail.strDrink;
 
     //  Details div
     const detailCocktail = document.createElement("div");

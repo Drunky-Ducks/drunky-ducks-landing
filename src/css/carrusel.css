@@ -14,3 +14,50 @@
 .swiper {
   height: 100%;
 }
+
+footer {
+  background: #292929;
+  color: #fff;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1em;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 7px;
+}
+
+.icon-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.icon {
+  font-size: 36px;
+  color: #fff;
+}
+
+.footer .contact-container a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7px;
+}
+
+.footer img {
+  height: 80%;
+}

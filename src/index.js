@@ -7,12 +7,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-//  Controll modal events
-const modalButtons = document.querySelectorAll(".modal .button");
-
-phraseContainer.innerHTML =
-  quotesArray[Math.floor(Math.random() * quotesArray.length)];
-
 // Put random quote in hero section
 document.querySelector(".random-quotes").innerHTML = randomQuote();
 

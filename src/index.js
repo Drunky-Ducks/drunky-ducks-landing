@@ -10,8 +10,18 @@ import "swiper/css/pagination";
 //  Controll modal events
 const modalButtons = document.querySelectorAll(".modal .button");
 
-phraseContainer.innerHTML =
-  quotesArray[Math.floor(Math.random() * quotesArray.length)];
+for (const modalButton of modalButtons) {
+  modalButton.addEventListener("click", (event) => {
+    const choose = event.target.classList[1];
+    const modal = document.querySelector(".modal");
+
+    if (choose === "overage") {
+      modal.style.display = "none";
+    } else {
+      location.replace("https://www.google.com/");
+    }
+  });
+}
 
 // Put random quote in hero section
 document.querySelector(".random-quotes").innerHTML = randomQuote();
@@ -47,33 +57,3 @@ swiper.on();
 
 // Introduce JSON data cocktails in Swiper
 fillSwiper();
-
-const btnE1 = document.getElementById("btn");
-btnE1.addEventListener("mouseover", (event) => {
-  const x = event.pageX - btnE1.offsetLeft;
-  const y = event.pageY - btnE1.offsetTop;
-  btnE1.style.setProperty("--x-pos", x + "px");
-  btnE1.style.setProperty("--y-pos", y + "px");
-});
-
-// LocalStorage del Modal
-const overage = document.querySelector(".overage");
-const underage = document.querySelector(".underage");
-const modal = document.querySelector(".modal");
-
-overage.addEventListener("click", () => {
-  localStorage.setItem("isOverage", true);
-  modal.style.display = "none";
-});
-
-underage.addEventListener("click", () => {
-  location.replace("https://www.google.com/");
-});
-
-window.addEventListener("load", () => {
-  const overageState = localStorage.getItem("isOverage");
-
-  if (!overageState) {
-    modal.style.display = "grid";
-  }
-});

@@ -1,6 +1,7 @@
 @import "./css/carrusel.css";
 @import "./css/preview-section.css";
-@import "./css/ttitle-section";
+@import "./css/title-section.css";
+@import "./css/go-app.css";
 
 :root {
   --swiper-navigation-color: #fff;
@@ -44,6 +45,16 @@ body {
 }
 
 /*    Modal   */
+
+.modal .container {
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -51,21 +62,29 @@ body {
   place-content: center;
   width: 100%;
   height: 100%;
-  background: rgb(255 255 255 / 18%);
-  backdrop-filter: blur(8px);
+  background: #2b373d;
   z-index: 3;
 }
 
 .line-hr {
-  background: var(--deault-color);
+  background: #ffc300;
   width: 80%;
-  height: 2px;
+  height: 5px;
 }
 
 .modal h1 {
   color: var(--deault-color);
   font-family: var(--font-no-default);
   font-size: 50px;
+  margin: 10px 0;
+}
+
+.modal h1 span {
+  color: #de5109;
+}
+
+.modal h1 span:first-child {
+  color: #40bfc1;
 }
 
 .modal h2 {
@@ -76,11 +95,55 @@ body {
   margin-top: 20px;
 }
 
-.modal .container {
-  border-radius: 7px;
+/*    General Section   */
+
+.section {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  color: var(--deault-color);
+}
+
+main {
+  /* background: linear-gradient(135deg, #184e68 0%, #57ca85 100%); */
+  background-color: #202124;
+}
+
+/*    Navbar   */
+
+.navbar {
+  width: 100%;
+  height: fit-content;
+  background: #0000008d;
+  position: fixed;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+nav ul li {
+  font-family: var(--font-no-default);
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+nav ul li a {
+  height: 100%;
+  color: var(--deault-color);
+  text-decoration: none;
+  font: bold;
+  transition: 1s;
+}
+
+nav ul li:hover a {
+  color: #ffc300;
 }

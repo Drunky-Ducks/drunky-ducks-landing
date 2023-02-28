@@ -127,3 +127,26 @@ btnE1.addEventListener("mouseover", (event) => {
   btnE1.style.setProperty("--x-pos", x + "px");
   btnE1.style.setProperty("--y-pos", y + "px");
 });
+
+// LocalStorage del Modal
+const overage = document.querySelector(".overage");
+const underage = document.querySelector(".underage");
+const modal = document.querySelector(".modal");
+
+overage.addEventListener("click", () => {
+  localStorage.setItem("overage", "si");
+});
+
+underage.addEventListener("click", () => {
+  localStorage.setItem("underage", "no");
+});
+
+window.addEventListener("load", () => {
+  const overageState = localStorage.getItem("overage");
+  const underageState = localStorage.getItem("underage");
+  if (overageState === "si") {
+    modal.style.display = "none";
+  } else if (underageState === "no") {
+    location.replace("https://www.google.com/");
+  }
+});

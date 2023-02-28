@@ -16,6 +16,20 @@ const phraseContainer = document.getElementsByClassName("random-quotes")[0];
 
 phraseContainer.innerHTML =
   quotesArray[Math.floor(Math.random() * quotesArray.length)];
+const buttons = document.querySelectorAll(".button");
+
+for (const button of buttons) {
+  button.addEventListener("click", (event) => {
+    const choose = event.target.classList[1];
+    const modal = document.querySelector(".modal");
+
+    if (choose === "overage") {
+      modal.style.display = "none";
+    } else {
+      location.replace("https://www.google.com/");
+    }
+  });
+}
 
 /*    Introduce JSON data cocktails in carrousel */
 const putCoctailksSwiper = () => {
@@ -120,18 +134,19 @@ const underage = document.querySelector(".underage");
 const modal = document.querySelector(".modal");
 
 overage.addEventListener("click", () => {
-  localStorage.setItem("isOverage", true);
-  modal.style.display = "none";
+  localStorage.setItem("overage", "si");
 });
 
 underage.addEventListener("click", () => {
-  location.replace("https://www.google.com/");
+  localStorage.setItem("underage", "no");
 });
 
 window.addEventListener("load", () => {
-  const overageState = localStorage.getItem("isOverage");
-
-  if (!overageState) {
-    modal.style.display = "grid";
+  const overageState = localStorage.getItem("overage");
+  const underageState = localStorage.getItem("underage");
+  if (overageState === "si") {
+    modal.style.display = "none";
+  } else if (underageState === "no") {
+    location.replace("https://www.google.com/");
   }
 });

@@ -63,7 +63,8 @@
 .title-logo img {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(3px 0 43px var(--deault-color));
+  /* filter: drop-shadow(3px 0 43px var(--deault-color)); */
+  filter: drop-shadow(8px 6px 47px #000);
 }
 
 .quotes-container {

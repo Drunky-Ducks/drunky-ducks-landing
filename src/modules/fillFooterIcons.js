@@ -14,7 +14,7 @@ export const fillFooterIcons = () => {
   for (const anchor of anchors) {
     const iconTag = anchor.classList[1];
     const icon = icons[iconTag];
-    console.log(icon);
+
     anchor.appendChild(icon);
   }
 };

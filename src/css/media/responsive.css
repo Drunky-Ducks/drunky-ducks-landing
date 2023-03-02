@@ -20,6 +20,10 @@
 }
 
 @media screen and (max-width: 425px) {
+  .modal > * {
+    font-size: 0.9em;
+  }
+
   .title-logo {
     width: 80%;
     font-size: 2.5em;

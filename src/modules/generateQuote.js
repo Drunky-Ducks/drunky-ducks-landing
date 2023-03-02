@@ -15,5 +15,6 @@ const quotes = [
 
 export const randomQuote = () => {
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
-  return `${quote.quote} <br> ${quote.author}`;
+
+  return quote;
 };

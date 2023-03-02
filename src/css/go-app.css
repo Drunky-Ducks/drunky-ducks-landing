@@ -9,7 +9,11 @@
   margin-top: 12em;
   padding: 1em;
   color: white;
-  box-shadow: inset 0px 0px 28px -1px #000000;
+  box-shadow: inset 0 0 28px -1px #000;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   margin-bottom: 6em;
+}
+
+.go-app h1 span {
+  font-family: Cheri, fantasy;
 }

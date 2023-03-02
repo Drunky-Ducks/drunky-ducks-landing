@@ -1,0 +1,73 @@
+@media screen and (max-width: 768px) {
+  .preview {
+    padding: 10% 0;
+  }
+
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    padding: 25px 0;
+    width: 85%;
+  }
+
+  .go-app {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .title-logo {
+    width: 80%;
+    font-size: 2.5em;
+  }
+
+  .quotes-container {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 0 1em;
+  }
+
+  .btn {
+    font-size: 1.3em;
+    margin-top: 1.5em;
+  }
+
+  .cocktails {
+    padding: 20% 0;
+  }
+
+  .cocktails h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .preview {
+    padding: 20% 0;
+  }
+
+  .tag {
+    min-width: 90%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .tag {
+    min-width: 90%;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .developed span {
+    text-align: center;
+  }
+}

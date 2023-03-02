@@ -15,42 +15,74 @@ export class CocktailInfo extends HTMLElement {
 
   static get styles() {
     return /* css */ `
+        @media screen and (max-width: 768px){
+          img {
+            max-width: 300px;
+            max-height: 400px;
+          }
+        }
+
+        @media screen and (max-width: 425px) {
+          .details {
+            flex-direction: column;
+          }
+        }
+
+        @media screen and (max-width: 375px) {
+          img {
+            max-width: 200px;
+            max-height: 300px;
+          }
+        }
+
+        @media screen and (max-width: 320px) {
+          .details div {
+            font-size: 0.9em;
+          }
+        }
+
         * {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
         }
 
-        div {
-            margin-top: 4%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            font-size: 1.4rem;
+        .details {
+          width: 100%;
+          display: flex;
+          flex-direction: row-reverse;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 1.4rem;
+          gap: 40px;
         }
 
         img{
-            width: 400px;
-            height: 500px;
-            background-size: contain;
-            background-position: center;
-            border-radius: 5px;
-            box-shadow: 2px 4px 8px #585858;
-            margin-bottom: 1em;
+          width: 400px;
+          height: 500px;
+          box-shadow: rgb(0 0 0 / 50.8%) 0 8px 15px;
+        }
+
+        .details div {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
         }
 
         h1 {
-            color: #ffc300;
-            letter-spacing: 1.5px;
+          color: #ffc300;
+          letter-spacing: 1.5px;
         }
 
         h3 {
-        color: #f9db7a;
+          color: #f9db7a;
         }
 
-        ul {list-style: none;}
+        ul {
+          list-style: none;
+        }
     `;
   }
 
@@ -81,11 +113,13 @@ export class CocktailInfo extends HTMLElement {
 
     this.shadowRoot.innerHTML = /* html */ `
         <style>${CocktailInfo.styles}</style>
-        <div>
+        <div class="details">
             <img src=${cocktail.strDrinkThumb} alt=${cocktail.strDrink}>
-            <h1>${cocktail.strDrink}</h1>
-            <h3>${cocktail.strAlcoholic}</h3>
-            <ul class="cocktail-ingredients"></ul>
+            <div>
+              <h1>${cocktail.strDrink}</h1>
+              <h3>${cocktail.strAlcoholic}</h3>
+              <ul class="cocktail-ingredients"></ul>
+            </div>
         </div>
     `;
   }

@@ -20,6 +20,10 @@
 }
 
 @media screen and (max-width: 425px) {
+  .preview {
+    padding: 20% 0;
+  }
+
   .modal > * {
     font-size: 0.9em;
   }
@@ -51,10 +55,6 @@
 }
 
 @media screen and (max-width: 375px) {
-  .preview {
-    padding: 20% 0;
-  }
-
   .tag {
     min-width: 90%;
   }

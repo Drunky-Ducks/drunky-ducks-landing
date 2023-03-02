@@ -49,6 +49,7 @@
   text-align: center;
   font-style: oblique;
   font-size: 1.5em;
+  text-shadow: 3px 3px 2px black;
 }
 
 .quotes-container p:last-child {

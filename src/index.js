@@ -2,8 +2,6 @@ import { randomQuote } from "./modules/generateQuote";
 import { fillSwiper } from "./modules/fillSwiper";
 import { fillFooterIcons } from "./modules/fillFooterIcons";
 
-import "./components/ListIcon";
-
 // import Swiper and modules styles
 import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";

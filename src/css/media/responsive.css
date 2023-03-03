@@ -1,8 +1,4 @@
 @media screen and (max-width: 768px) {
-  .preview {
-    padding: 10% 0;
-  }
-
   .welcome-container {
     display: flex;
     flex-direction: column;
@@ -20,8 +16,8 @@
 }
 
 @media screen and (max-width: 425px) {
-  .preview {
-    padding: 20% 0;
+  .navbar {
+    display: none;
   }
 
   .modal > * {

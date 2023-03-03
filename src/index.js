@@ -70,20 +70,19 @@ const underage = document.querySelector(".underage");
 const modal = document.querySelector(".modal");
 
 overage.addEventListener("click", () => {
-  localStorage.setItem("overage", "si");
+  localStorage.setItem("overage", true);
+  modal.style.display = "none";
 });
 
 underage.addEventListener("click", () => {
-  localStorage.setItem("underage", "no");
+  location.replace("https://www.google.com/");
 });
 
 window.addEventListener("load", () => {
   const overageState = localStorage.getItem("overage");
-  const underageState = localStorage.getItem("underage");
-  if (overageState === "si") {
-    modal.style.display = "none";
-  } else if (underageState === "no") {
-    location.replace("https://www.google.com/");
+
+  if (!overageState) {
+    modal.style.display = "grid";
   }
 });
 

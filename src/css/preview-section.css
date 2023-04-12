@@ -8,11 +8,22 @@
   padding: 6rem 0;
 }
 
-.welcome-container {
+.welcome-container,
+.about-us-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
+}
+
+.about-us-container a {
+  text-decoration: none;
+  color: #ffc300;
+}
+
+.about-us-container a:hover {
+  text-decoration: underline;
+  color: #40bfc1;
 }
 
 .logo {
@@ -37,9 +48,14 @@
   margin-bottom: 12px;
 }
 
-.text h3 span {
+.text h3 span,
+.drunky-ducks-name {
   font-family: Cheri, monospace;
   letter-spacing: 2px;
+}
+
+.drunky-ducks-name {
+  color: #40bfc1;
 }
 
 .tags {

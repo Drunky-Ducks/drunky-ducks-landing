@@ -8,22 +8,56 @@
   padding: 6rem 0;
 }
 
-.welcome-container,
-.about-us-container {
+.welcome-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
 }
 
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about-us-container .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .about-us-container a {
   text-decoration: none;
-  color: #ffc300;
+  color: #40bfc1;
 }
 
 .about-us-container a:hover {
-  text-decoration: underline;
-  color: #40bfc1;
+  color: #ffc300;
+}
+
+.profiles-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px 50px;
+}
+
+.profile a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
 }
 
 .logo {
@@ -49,12 +83,13 @@
 }
 
 .text h3 span,
-.drunky-ducks-name {
+.drunky-ducks-name,
+.name-style {
   font-family: Cheri, monospace;
   letter-spacing: 2px;
 }
 
-.drunky-ducks-name {
+.drunky-ducks-style {
   color: #40bfc1;
 }
 

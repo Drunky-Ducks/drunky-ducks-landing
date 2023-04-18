@@ -15,6 +15,51 @@
   width: 80%;
 }
 
+.about-us-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.about-us-container .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-us-container a {
+  text-decoration: none;
+  color: #40bfc1;
+}
+
+.about-us-container a:hover {
+  color: #ffc300;
+}
+
+.profiles-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 40px 50px;
+}
+
+.profile a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
 .logo {
   height: 30vh;
 }
@@ -37,9 +82,15 @@
   margin-bottom: 12px;
 }
 
-.text h3 span {
+.text h3 span,
+.drunky-ducks-name,
+.name-style {
   font-family: Cheri, monospace;
   letter-spacing: 2px;
+}
+
+.drunky-ducks-style {
+  color: #40bfc1;
 }
 
 .tags {

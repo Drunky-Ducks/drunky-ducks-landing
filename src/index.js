@@ -21,15 +21,6 @@ const quotesContainer = document.querySelector(".quotes-container");
 quotesContainer.appendChild(quote);
 quotesContainer.appendChild(author);
 
-// Hero button hover animation
-const heroButton = document.querySelector("#btn");
-heroButton.addEventListener("mouseover", (event) => {
-  const x = event.pageX - heroButton.offsetLeft;
-  const y = event.pageY - heroButton.offsetTop;
-  heroButton.style.setProperty("--x-pos", x + "px");
-  heroButton.style.setProperty("--y-pos", y + "px");
-});
-
 // Initialize swiper element
 const swiper = new Swiper(".swiper", {
   // Optional parameters
@@ -55,15 +46,6 @@ fillSwiper();
 
 fillFooterIcons();
 
-// const btnE1 = document.querySelector(".title #btn");
-
-// btnE1.addEventListener("mouseover", (event) => {
-//   const x = event.pageX - btnE1.offsetLeft;
-//   const y = event.pageY - btnE1.offsetTop;
-//   btnE1.style.setProperty("--x-pos", x + "px");
-//   btnE1.style.setProperty("--y-pos", y + "px");
-// });
-
 // LocalStorage del Modal
 const overage = document.querySelector(".overage");
 const underage = document.querySelector(".underage");
@@ -85,8 +67,3 @@ window.addEventListener("load", () => {
     modal.style.display = "grid";
   }
 });
-
-// const navbar = document.querySelector(".navbar");
-// const listIcon = document.createElement("list-icon");
-
-// navbar.appendChild(listIcon);
